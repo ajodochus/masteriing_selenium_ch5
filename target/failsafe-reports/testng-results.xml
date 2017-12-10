@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="40702" started-at="2017-12-10T19:36:34Z" finished-at="2017-12-10T19:37:15Z">
+  <suite name="Surefire suite" duration-ms="68368" started-at="2017-12-10T20:17:00Z" finished-at="2017-12-10T20:18:08Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="40702" started-at="2017-12-10T19:36:34Z" finished-at="2017-12-10T19:37:15Z">
+    <test name="Surefire test" duration-ms="68368" started-at="2017-12-10T20:17:00Z" finished-at="2017-12-10T20:18:08Z">
       <class name="com.masteringselenium.tests.test_joomla_login_frontend">
-        <test-method status="PASS" signature="instantiateDriverObject()[pri:0, instance:com.masteringselenium.tests.test_joomla_login_frontend@880ec60]" name="instantiateDriverObject" is-config="true" duration-ms="34" started-at="2017-12-10T20:36:34Z" finished-at="2017-12-10T20:36:34Z">
+        <test-method status="PASS" signature="instantiateDriverObject()[pri:0, instance:com.masteringselenium.tests.test_joomla_login_frontend@7f63425a]" name="instantiateDriverObject" is-config="true" duration-ms="58" started-at="2017-12-10T21:17:00Z" finished-at="2017-12-10T21:17:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiateDriverObject -->
-        <test-method status="PASS" signature="valid_login_into_frontend()[pri:0, instance:com.masteringselenium.tests.test_joomla_login_frontend@880ec60]" name="valid_login_into_frontend" duration-ms="40576" started-at="2017-12-10T20:36:35Z" finished-at="2017-12-10T20:37:15Z">
+        <test-method status="PASS" signature="valid_login_into_frontend()[pri:0, instance:com.masteringselenium.tests.test_joomla_login_frontend@7f63425a]" name="valid_login_into_frontend" duration-ms="68082" started-at="2017-12-10T21:17:00Z" finished-at="2017-12-10T21:18:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- valid_login_into_frontend -->
-        <test-method status="PASS" signature="clearCookies()[pri:0, instance:com.masteringselenium.tests.test_joomla_login_frontend@880ec60]" name="clearCookies" is-config="true" duration-ms="42" started-at="2017-12-10T20:37:15Z" finished-at="2017-12-10T20:37:15Z">
+        <test-method status="PASS" signature="clearCookies()[pri:0, instance:com.masteringselenium.tests.test_joomla_login_frontend@7f63425a]" name="clearCookies" is-config="true" duration-ms="99" started-at="2017-12-10T21:18:08Z" finished-at="2017-12-10T21:18:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clearCookies -->
-        <test-method status="PASS" signature="closeDriverObjects()[pri:0, instance:com.masteringselenium.tests.test_joomla_login_frontend@880ec60]" name="closeDriverObjects" is-config="true" duration-ms="274" started-at="2017-12-10T20:37:15Z" finished-at="2017-12-10T20:37:16Z">
+        <test-method status="PASS" signature="closeDriverObjects()[pri:0, instance:com.masteringselenium.tests.test_joomla_login_frontend@7f63425a]" name="closeDriverObjects" is-config="true" duration-ms="825" started-at="2017-12-10T21:18:09Z" finished-at="2017-12-10T21:18:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriverObjects -->
