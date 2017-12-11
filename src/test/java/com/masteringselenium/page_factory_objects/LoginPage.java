@@ -33,6 +33,12 @@ public class LoginPage {
     	logger.info("logout button is displayed");
         return logout_button.isDisplayed();
     }
+    
+    public IndexPage logout_frontend() throws Exception{
+    	logger.info("logout via logout button");
+    	logout_button.click();   	
+		return new IndexPage();    	
+    }
 
     
 }
