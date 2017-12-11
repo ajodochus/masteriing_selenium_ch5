@@ -4,6 +4,7 @@ import com.masteringselenium.DriverFactory;
 import com.masteringselenium.page_factory_objects.AboutPage;
 import com.masteringselenium.page_factory_objects.IndexPage;
 import com.masteringselenium.page_factory_objects.PageFooter;
+import com.masteringselenium.page_factory_objects.LoginPage;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
@@ -11,33 +12,36 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 
+import org.apache.log4j.Logger;
+import org.apache.xalan.xsltc.dom.LoadDocument;
+
 public class CheckAboutPageTextWD extends DriverFactory {
 
-    @Test
-    public void checkThatAboutPageHasTextStep1() throws Exception {
-        getDriver().get("http://ch5.masteringselenium.com/index.html");
-        getDriver().findElement(By.cssSelector("footer div:nth-child(1) > a")).click();
-        String titleText = getDriver().findElement(By.cssSelector(".container > div h1")).getText();
-
-        assertThat(titleText, is(equalTo("About us!")));
-    }
+	private static Logger logger = Logger.getLogger(LoginPage.class);
 
     @Test
-    public void checkThatAboutPageHasTextStep2() throws Exception {
-        getDriver().get("http://ch5.masteringselenium.com/index.html");
+    public void login_tests() throws Exception {
+        getDriver().get("https://bwselenium.joomla.com/");
         IndexPage indexPage = new IndexPage();
 
-        assertThat(indexPage.mainTextIsDisplayed(), is(equalTo(true)));
-        assertThat(indexPage.mainPageButtonIsDisplayed(), is(equalTo(true)));
+        assertThat(indexPage.login_button_ist_displayed(), is(equalTo(true)));
+        assertThat(indexPage.welcome_text_is_displayed(), is(equalTo(true)));
+        
+        indexPage.login_with_username_and_password("ranorex", "ranorex");
+        
+        LoginPage loginPage = new LoginPage();
+        assertThat(loginPage.user_welcome_text_is_equal_to(), is(equalTo("Hi ranorex,")));
+        assertThat(loginPage.logout_button_is_displayed(), is(equalTo(true)));
+        
 
-        PageFooter footer = new PageFooter();
-        footer.goToTheAboutUsPage();
-        AboutPage aboutPage = new AboutPage();
-
-        assertThat(aboutPage.aboutUsTextIsDisplayed(), is(equalTo(true)));
+//        PageFooter footer = new PageFooter();
+//        footer.goToTheAboutUsPage();
+//        AboutPage aboutPage = new AboutPage();
+//
+//        assertThat(aboutPage.aboutUsTextIsDisplayed(), is(equalTo(true)));
     }
 
-    @Test
+    /*@Test
     public void checkThatAboutPageHasTextStep3() throws Exception {
         getDriver().get("http://ch5.masteringselenium.com/index.html");
         IndexPage indexPage = new IndexPage();
@@ -75,6 +79,6 @@ public class CheckAboutPageTextWD extends DriverFactory {
         aboutPage = indexPage.footer.goToTheAboutUsPage();
 
         assertThat(aboutPage.aboutUsTextIsDisplayed(), is(equalTo(true)));
-    }
+    }*/
 
 }

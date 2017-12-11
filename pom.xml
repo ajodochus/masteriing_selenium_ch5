@@ -80,7 +80,7 @@
                         <webdriver.opera.driver>${webdriver.opera.driver}</webdriver.opera.driver>
                     </systemProperties>
                     <includes>
-                        <include>**/test*.java</include>
+                        <include>**/Check*.java</include>
                     </includes>
                 </configuration>
                 <executions>
