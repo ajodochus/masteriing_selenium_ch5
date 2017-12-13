@@ -19,12 +19,12 @@
         <selenium.version>2.53.1</selenium.version>
         <!-- Configurable variables -->
         <threads>1</threads>
-        <browser>firefox</browser>
+        <browser>FIREFOX</browser>
         <overwrite.binaries>false</overwrite.binaries>
         <remote>false</remote>
-        <seleniumGridURL/>
-        <platform/>
-        <browserVersion/>
+        <seleniumGridURL></seleniumGridURL>
+        <platform></platform>
+        <browserVersion></browserVersion>
     </properties>
 
     <build>

@@ -34,6 +34,7 @@ public enum DriverType implements DriverSetup {
             HashMap<String, String> chromePreferences = new HashMap<String, String>();
             chromePreferences.put("profile.password_manager_enabled", "false");
             capabilities.setCapability("chrome.prefs", chromePreferences);
+            //capabilities.setCapability("Version", "");
             return capabilities;
         }
 

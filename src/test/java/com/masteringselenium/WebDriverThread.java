@@ -1,6 +1,9 @@
 package com.masteringselenium;
 
 import com.masteringselenium.config.DriverType;
+import com.masteringselenium.page_factory_objects.LoginPage;
+
+import org.apache.log4j.Logger;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -22,6 +25,8 @@ public class WebDriverThread {
     private final String operatingSystem = System.getProperty("os.name").toUpperCase();
     private final String systemArchitecture = System.getProperty("os.arch");
     private final boolean useRemoteWebDriver = Boolean.getBoolean("remoteDriver");
+    
+    private static Logger logger = Logger.getLogger(WebDriverThread.class);
 
     public WebDriver getDriver() throws Exception {
         if (null == webdriver) {
@@ -59,9 +64,13 @@ public class WebDriverThread {
         System.out.println(" ");
 
         if (useRemoteWebDriver) {
+        	logger.info("use remote webdriver: " + useRemoteWebDriver);
             URL seleniumGridURL = new URL(System.getProperty("gridURL"));
+            logger.info("use grid url: " + seleniumGridURL);
             String desiredBrowserVersion = System.getProperty("desiredBrowserVersion");
+            logger.info("use browser version: " + desiredBrowserVersion);
             String desiredPlatform = System.getProperty("desiredPlatform");
+            logger.info("use desired platform: " + desiredPlatform);
 
             if (null != desiredPlatform && !desiredPlatform.isEmpty()) {
                 desiredCapabilities.setPlatform(Platform.valueOf(desiredPlatform.toUpperCase()));
